@@ -1,0 +1,44 @@
+name: finance_plus
+description: "Finance+ — Plan, Manage, Grow."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.4.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  supabase_flutter: ^2.5.6   # auth + database client
+  fl_chart: ^0.69.0          # donut / pie chart on the review screen
+  intl: ^0.19.0              # currency formatting
+  flutter_secure_storage: ^9.2.2  # encrypted storage for "remember me"
+  url_launcher: ^6.3.0       # opens the email app for feedback
+  image_picker: ^1.1.2       # pick profile picture / background image
+  path_provider: ^2.1.4      # save chosen background image locally
+  http: ^1.2.2               # fetch live currency exchange rates
+  connectivity_plus: ^6.0.5  # detect online/offline for the offline banner
+  powersync: ^2.2.0
+  path: ^1.9.1
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.1   # generates the home-screen app icon
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+# Run:  dart run flutter_launcher_icons
+# (after putting your icon at assets/images/app_icon.png)
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  # min_sdk_android: 21
+  # For a transparent/adaptive Android icon, also set:
+  # adaptive_icon_background: "#FFFFFF"
+  # adaptive_icon_foreground: "assets/images/app_icon.png"

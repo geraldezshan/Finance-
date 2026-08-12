@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Email Confirmed · Finance+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --green:#2E9E3F; --green-dark:#1F7A2E; --accent:#4CD137;
+    --ink:#14241a; --muted:#6b7a70; --card:#ffffff; --line:#e4ece6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    min-height:100svh; display:grid; place-items:center; padding:24px;
+    font-family:"Outfit",sans-serif; color:var(--ink);
+    background:
+      radial-gradient(900px 600px at 15% -10%, rgba(76,209,55,.18), transparent 60%),
+      radial-gradient(700px 500px at 110% 115%, rgba(46,158,63,.20), transparent 55%),
+      #f4f8f5;
+  }
+  .card{
+    width:min(440px,100%); background:var(--card); border:1px solid var(--line);
+    border-radius:26px; padding:48px 36px 40px; text-align:center;
+    box-shadow:0 30px 70px -30px rgba(31,122,46,.40);
+    animation:rise .7s cubic-bezier(.2,.8,.2,1) both;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .brand{display:inline-flex;align-items:center;gap:8px;font-family:"Bricolage Grotesque";font-weight:800;font-size:22px;margin-bottom:34px}
+  .brand .f{width:30px;height:30px;border-radius:8px;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:18px}
+  .brand .plus{color:var(--green)}
+  .ring{
+    width:108px;height:108px;border-radius:50%;margin:0 auto 26px;
+    display:grid;place-items:center;
+    background:linear-gradient(160deg,var(--accent),var(--green));
+    box-shadow:0 16px 34px -12px rgba(46,158,63,.6);
+    animation:pop .6s .15s cubic-bezier(.2,1.3,.4,1) both;
+  }
+  @keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+  svg.check{width:54px;height:54px}
+  svg.check path{stroke:#fff;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;fill:none;
+    stroke-dasharray:48;stroke-dashoffset:48;animation:draw .5s .5s forwards ease-out}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  h1{font-family:"Bricolage Grotesque";font-weight:800;font-size:30px;letter-spacing:-.5px;margin-bottom:12px}
+  p{color:var(--muted);line-height:1.55;font-size:15.5px}
+  .hint{margin-top:28px;padding:14px 16px;border:1px dashed var(--line);border-radius:14px;
+    font-size:14px;color:var(--green-dark);background:rgba(76,209,55,.06)}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="brand"><span class="f">F</span>Finance<span class="plus">+</span></div>
+    <div class="ring">
+      <svg class="check" viewBox="0 0 52 52" aria-hidden="true">
+        <path d="M14 27 L23 36 L39 18" />
+      </svg>
+    </div>
+    <h1>Email Confirmed!</h1>
+    <p>Your account is verified and ready to go.</p>
+    <div class="hint">You can close this tab and log in from the Finance+ app.</div>
+  </main>
+</body>
+</html>
